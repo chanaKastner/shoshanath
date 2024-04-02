@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&family=Varela+Round&display=swap');
+.words{
+    /* margin-top: 190px; */
+    font-family: 'Rubik Spray Paint';
+}
+#pp
+{
+    font-family: 'Varela Round', sans-serif; 
+    color:#824C4D;
+}
+/* font-family: 'Rubik Spray Paint', system-ui;
+font-family: 'Varela Round', sans-serif; */
+
+@media (max-width: 991px) {
+    .words{
+        margin-top: 0px;
+    }  
+}
