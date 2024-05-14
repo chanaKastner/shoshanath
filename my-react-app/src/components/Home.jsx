@@ -6,25 +6,10 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 export const Home = () => {
 	return <>
 		<p className="header_p">ברוכים הבאים לשושנת העמקים</p>
-		
+
 		<div className="text-center container">
 			<Carousel autoPlay={true} useRightLeftTriangles={true} slides={slides} />
 		</div>
-{/* <div style={{ backgroundColor: "#4567", width: "90%", height: "500px", marginTop: "180px", marginLeft: "5%" }}></div> */}
-		{/* <div className='wrap_categories'>
-			{
-				componentsData.map((component) => (
-					<>{
-						component.images[1] && <>
-							<div className="mask1">
-								<img src={component.images[1]} alt="" className="imgF" />
-							</div>
-							<img src="מסגרת.webp" alt="ghh" width="200px" className="mis"></img>
-						</>}
-					</>
-				))
-			}
-		</div> */}
 	</>
 }
 
@@ -70,10 +55,8 @@ const CarouselIndicators = ({
 			<li
 				key={i}
 				className={i === nextActiveIndex ? 'active' : ''}
-				//eslint-ignore-next-line
 				style={{ '--indicatorsColor': indicatorsColor }}
 				onClick={() => {
-					// eslint-disable-next-line no-unused-expressions
 					slides.length !== 1 && i !== nextActiveIndex ? clickHandler(i) : null;
 				}}
 			/>

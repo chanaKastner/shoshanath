@@ -4,37 +4,6 @@
   layer(base.normalize);
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..900&family=Lobster&display=swap');
 
-/* @layer base.override-normalize {
-  :root {
-    font-family: 'Inter Variable', sans-serif;
-    --surface-1: oklch(0 0 0);
-    --text-1: oklch(0.97 0 0);
-    --text-2: oklch(0.73 0 0);
-    --link-visited: oklch(0.73 0 0);
-  }
-
-  a {
-    color: var(--text-2);
-    display: flex;
-    gap: var(--size-1);
-  }
-}
-
-@layer base.app {
-  body {
-    --max-inline: 935px;
-    --gap: var(--size-fluid-4);
-  } */
-
-  /* section {
-    display: grid;
-    justify-content: center;
-    padding-inline: var(--size-1);
-    gap: var(--size-7);
-  } */
-/* } */
-
-
 
 @layer components.gallery {
   .imageGallery {

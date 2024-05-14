@@ -1,83 +1,22 @@
 import { Link } from "react-router-dom"
 import '../style/navbar.css'
 import '../style/fontawesome/css/all.min.css'
-import { useEffect, useState } from "react"
-import componentsData from '../data.json'
+import { useState } from "react"
 export const Nav = () => {
     const [showNav, setShowNav] = useState(true);
     const click = () => {
         setShowNav(!showNav);
     }
-    // function getData() {
-    //     fetch("../data.json")
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             alert(data[0].componentName);
-    //         })
-    //         .catch(error => alert(error));
-    // }
-
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = await getData();
-    //             setMyData(response);
-    //         }
-    //         catch (error) {
-    //             console.error(error);
-    //         }
-    //     };
-    //     fetchData();
-    // }, []);
-
-    // let className = 'link';
-    {/* let className = 'menu';
-  if (this.props.isActive) {
-    className += ' menu-active';
-  }
-  return <span className={className}>תפריט</span>
-} */}
     return <>
         {(showNav) ? <nav className="navbar" >
             <i className="fa-solid fa-times" onClick={click}></i>
             <img src='/לוגולאתר.gif' alt="logo" id="logo"></img>
-            {/* <div className="nav-btn">
                 <ul className="navbar-links">
-                <li className="navbar-dropdown">
-                <div className="link"><Link to="home" className="nav-link active" data-bs-toggle="tab"><i className="fa-solid fa-home"></i> דף הבית </Link></div>
-                </li>
-</ul>
-</div> */}
-            {/* <div className="nav-btn"> */}
-                <ul className="navbar-links">
-                    {/* {(
-                        componentsData.map((component) =>
-                        (
-                            <li className="navbar-dropdown">
-                                <div className="link"><Link to={component.to} className="nav-link active" data-bs-toggle="tab"><i className={component.icon}></i> {component.componentName} </Link></div>
-
-                                <div className="dropdown">
-                                    {
-                                        (componentsData.categories && componentsData.categories.length > 0 ? (
-                                            componentsData.categories.map((category) =>
-                                            (
-
-                                                < div className="link"><Link to={component.to} className="nav-link " data-bs-toggle="tab">{category.componentName} </Link></div>
-
-                                            ))) :
-                                            <></>
-                                        )
-                                    } </div>
-                            </li>
-                        )))
-                    } */}
-
-
                     <li className="navbar-dropdown">
                     <div className="link"><Link to="home" className="nav-link active" data-bs-toggle="tab"><i className="fa-solid fa-home"></i> דף הבית</Link></div>
                     </li>
                     <li className="navbar-dropdown">
-                        <div className="link"><Link to="about" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-spa"></i> אודותינו</Link></div>
+                        <div className="link"><Link to="about" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-spa"></i> אודות</Link></div>
                     </li>
                     <li className="navbar-dropdown">
                         <div className="link"><Link to="flowers/זרי אירוסין" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-caret-down"></i> זרי אירוסין</Link></div>
@@ -148,12 +87,6 @@ export const Nav = () => {
                         <div className="link"><Link to="contact" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-phone"></i> צור קשר </Link></div>
                     </li>
                 </ul>
-            {/* </div> */}
-            {/* <div className="hamburger-menu-container">
-                <div className="hamburger-menu">
-                    <div></div>
-                </div>
-            </div> */}
         </nav> :
             <i className="fa-solid fa-bars" onClick={click}></i>}
     </>

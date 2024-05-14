@@ -15,8 +15,10 @@ a {
 
 
 .footer {
-    background-color: #824C4D;
-    color: #fff;
+    /* background-color: #824C4D; */
+    background-color: black;
+    /* color: #fff; */
+    color:#fecd69;
     /* margin-top: -100px; */
     /* height: 300px; */
 }
@@ -35,11 +37,8 @@ a {
 }
 .footer-wave-path_contact{
     fill:#E1E0E5;
-    /* #E2E1E6; */
 }
-/* .green{
-    fill:#fffff2;
-} */
+
 
 .footer-content {
     margin-left: auto;
@@ -60,13 +59,12 @@ a {
 }
 
 .footer-content-column ul li a {
+    /* color: rgb(246, 54, 86); */
     color: #fff;
     text-decoration: none;
 }
 
-/* .footer-logo-link {
-    display: inline-block;
-} */
+
 .footer-header {
     font-size: 30px;
     /* float: right; */
@@ -106,8 +104,9 @@ a {
 }
 
 .footer-call-to-action-button:hover {
-    background-color: #fffff2;
-    color: #666;
+    background-color: #fecd69;
+
+    color: black;
 }
 
 .button:last-of-type {
@@ -115,10 +114,13 @@ a {
 }
 
 .footer-call-to-action-button {
-    background-color: #333;
+    background-color: none;
+    color: #fecd69;
+    border: #fecd69 2px solid;
+    /* background-color: #fecd69; */
     /* background-color: #FDAB52; */
     border-radius: 21px;
-    color: #fffff2;
+    /* color: #fffff2; */
     display: inline-block;
     font-size: 11px;
     font-weight: 900;
@@ -182,7 +184,12 @@ a {
 }
 
 .footer-social-amoeba-path {
-    fill: #333;
+    /* linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+	/* animation: gradient 15s ease infinite; */
+    fill: #ffd175;
+    /* fill: url(#my-cool-gradient) ; */
+    /* animation: gradient 15s ease infinite; */
+
     /* fill:#FDAB52 */
 }
 
@@ -221,7 +228,9 @@ a {
     fill: #fffff2;
     transition: fill .2s;
 }
-
+.footer-social-link {
+    color: #080808;
+}
 .footer-social-link.twitter {
     height: 28px;
     left: 62px;
@@ -244,7 +253,10 @@ a {
 }
 
 .footer-copyright {
-    background-color: #333;   
+    background: linear-gradient(to bottom right,#fecd69, #fecd69, #ffdfa0, #fff2d7 );
+    /* background-size: 400% 400%; */
+	/* animation: gradient 15s ease infinite; */
+    /* background-color: #fecd69;    */
     color: #fff;
     padding: 15px 30px;
     text-align: center;
@@ -266,7 +278,7 @@ a {
 }
 
 .footer-copyright-link {
-    color: #fff;
+    color: #080808;
     text-decoration: none;
 }
 
@@ -283,14 +295,14 @@ a {
 }
 
 .icon-circle {
-    background-color: whitesmoke;
-    border: whitesmoke 2px solid;
+    background-color: none;
+    border: #fecd69 2px solid;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     text-align: center;
     font-size: 20px;
-    color: #824C4D;
+    color: #fecd69;
     /* color: #FDAB52; */
 
 }
@@ -449,6 +461,17 @@ padding-right: 13%;
 
     .icon-circle {
         margin: 35px;
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
 /* /////////////////////////////////////////// */

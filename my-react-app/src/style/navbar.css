@@ -103,7 +103,8 @@ top:0;}
 }
 
 .navbar-links li a:hover {
-  color: #824C4D;
+  /* color: #824C4D; */
+  color: #fecd69;
 }
 
 /* .navbar-links li a::marker {

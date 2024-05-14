@@ -70,6 +70,7 @@
   background-color: #fff;
   text-align: center;
   border-radius: 50%;
+  /* color: #fecd69; */
   color: #824C4D;
 }
 
@@ -90,6 +91,7 @@
 
 .contact-info-content p {
   color: #824C4D;
+  /* color: #fecd69; */
   font-size: 1em;
 }
 
