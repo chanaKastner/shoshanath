@@ -1,15 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&family=Varela+Round&display=swap');
-
+/* @font-face {
+    font-family: 'FBGesher';
+    src: url('../../fonts/FbGesher-Regular.otf'),
+         url('../../fonts/FbGesher-Bold.otf');
+  }
+  #header_p {
+    font-family:'FBGesher' ;
+      padding-top: 190px;
+      font-size: 70px;
+      text-shadow: 0.04em 0.001em 0.01em #ffd359;
+  } */
 .words {
-    font-family: 'Rubik Spray Paint';
+    font-family: 'FBGesher', 'Rubik Spray Paint';
 }
 
 #pp {
     margin-top: -10px;
-    padding-right: 20%;
-    font-family: 'Varela Round', sans-serif;
-    color: #e4ab26;
+    /* padding-right: 20%; */
+    /* font-family: 'Varela Round', sans-serif; */
+    font-family: 'FBGesher';
+    text-shadow: 0.02em 0.02em 0.01em #000000, -0.02em -0.02em 0.01em #000000;
+    color: #b29752;
     font-size: 33px;
+}
+#logo1 {
+    width: 10rem;
 }
 
 .div1 {

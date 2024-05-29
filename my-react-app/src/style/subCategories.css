@@ -1,7 +1,11 @@
 .p_zerim {
-	padding-top: 190px;
+	/* padding-top: 190px;
 	font-size: 70px;
-	text-shadow: 0.2em 0.5em 0.1em #ddd, -0.3em 0.1em 0.1em #aaa, 0.4em -0.3em 0.1em #888;
+	text-shadow: 0.2em 0.5em 0.1em #ddd, -0.3em 0.1em 0.1em #aaa, 0.4em -0.3em 0.1em #888; */
+	font-family:'FBGesher' ;
+	padding-top: 190px;
+	font-size: 80px;
+  color: black;
 }
 
 /* hover image!!! */

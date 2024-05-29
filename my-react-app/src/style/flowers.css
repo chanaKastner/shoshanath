@@ -4,12 +4,21 @@
 
 	/* text-shadow: 0.2em 0.5em 0.1em #ddd, -0.3em 0.1em 0.1em #aaa, 0.4em -0.3em 0.1em #888; */
 }
+
+body {
+	background-color: black;
+	/* font-family: 'Varela Round', sans-serif; */
+  }
+  
 .p_header {
-	padding-top: 190px;
+	/* padding-top: 190px;
 	font-size: 90px;
 	font-weight: bold;
-	text-shadow: 0.075em 0.08em 0.1em rgba(222, 142, 21, 0.815);
-
+	text-shadow: 0.075em 0.08em 0.1em rgba(222, 142, 21, 0.815); */
+	font-family:'FBGesher' ;
+	padding-top: 190px;
+	font-size: 80px;
+  color: black;
 }
 .nameCat {
 	color: white;

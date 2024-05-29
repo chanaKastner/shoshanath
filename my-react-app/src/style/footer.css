@@ -18,7 +18,7 @@ a {
     /* background-color: #824C4D; */
     background-color: black;
     /* color: #fff; */
-    color:#fecd69;
+    color:#e4df99;
     /* margin-top: -100px; */
     /* height: 300px; */
 }
@@ -67,6 +67,7 @@ a {
 
 .footer-header {
     font-size: 30px;
+    color:#BCA661;
     /* float: right; */
     /* margin-right: -150px; */
 }
@@ -104,9 +105,23 @@ a {
 }
 
 .footer-call-to-action-button:hover {
-    background-color: #fecd69;
-
+    /* background-color: #e4df99; */
+    background: linear-gradient(-45deg, #b29752, #e4df99, #fff2d7 );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
     color: black;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .button:last-of-type {
@@ -115,14 +130,14 @@ a {
 
 .footer-call-to-action-button {
     background-color: none;
-    color: #fecd69;
-    border: #fecd69 2px solid;
-    /* background-color: #fecd69; */
+    color: #e4df99;
+    border: #e4df99 2px solid;
+    /* background-color: #e4df99; */
     /* background-color: #FDAB52; */
     border-radius: 21px;
     /* color: #fffff2; */
     display: inline-block;
-    font-size: 11px;
+    font-size: 25px;
     font-weight: 900;
     letter-spacing: .1em;
     line-height: 18px;
@@ -133,6 +148,7 @@ a {
     transition: background-color .2s;
     cursor: pointer;
     position: relative;
+    width: 200px;
 }
 
 .footer-call-to-action {
@@ -186,8 +202,8 @@ a {
 .footer-social-amoeba-path {
     /* linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
 	/* animation: gradient 15s ease infinite; */
-    fill: #ffd175;
-    /* fill: url(#my-cool-gradient) ; */
+    /* fill:linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+    fill: url(#my-cool-gradient) ;
     /* animation: gradient 15s ease infinite; */
 
     /* fill:#FDAB52 */
@@ -253,7 +269,7 @@ a {
 }
 
 .footer-copyright {
-    background: linear-gradient(to bottom right,#fecd69, #fecd69, #ffdfa0, #fff2d7 );
+    background: linear-gradient(to bottom right,#b29752, #b29752, #e4df99, #fff2d7 );
     /* background-size: 400% 400%; */
 	/* animation: gradient 15s ease infinite; */
     /* background-color: #fecd69;    */
@@ -296,13 +312,13 @@ a {
 
 .icon-circle {
     background-color: none;
-    border: #fecd69 2px solid;
+    border: #e4df99 2px solid;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     text-align: center;
     font-size: 20px;
-    color: #fecd69;
+    color: #e4df99;
     /* color: #FDAB52; */
 
 }

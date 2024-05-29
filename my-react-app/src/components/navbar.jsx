@@ -10,14 +10,20 @@ export const Nav = () => {
     return <>
         {(showNav) ? <nav className="navbar" >
             <i className="fa-solid fa-times" onClick={click}></i>
-            <img src='/לוגולאתר.gif' alt="logo" id="logo"></img>
+            <img src='/לוגו.PNG' alt="logo" id="logo"></img>
                 <ul className="navbar-links">
                     <li className="navbar-dropdown">
                     <div className="link"><Link to="home" className="nav-link active" data-bs-toggle="tab"><i className="fa-solid fa-home"></i> דף הבית</Link></div>
                     </li>
+                    <li><p className="line">|</p></li>
+                    
                     <li className="navbar-dropdown">
-                        <div className="link"><Link to="about" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-spa"></i> אודות</Link></div>
+                        <div className="link"><Link to="about" className="nav-link " data-bs-toggle="tab">
+                            {/* <i className="fa-solid fa-spa"></i> */}
+                             אודות</Link></div>
                     </li>
+                    <li><p className="line">|</p></li>
+
                     <li className="navbar-dropdown">
                         <div className="link"><Link to="flowers/זרי אירוסין" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-caret-down"></i> זרי אירוסין</Link></div>
                         <div className="dropdown">
@@ -25,6 +31,8 @@ export const Nav = () => {
                             <div className="link"><Link to="categories/זרים משולבים" className="nav-link " data-bs-toggle="tab">זרים משולבים</Link></div>
                         </div>
                     </li>
+                    <li><p className="line">|</p></li>
+
                     <li className="navbar-dropdown">
                         <div className="link"><Link to="flowers/זרי כלה" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-caret-down"></i> זרי כלה </Link></div>
                         <div className="dropdown">
@@ -34,6 +42,8 @@ export const Nav = () => {
                             <div className="link"><Link to="categories/זרי תכשיט" className="nav-link " data-bs-toggle="tab">זרי תכשיט</Link></div>
                         </div>
                     </li>
+                    <li><p className="line">|</p></li>
+
                     <li className="navbar-dropdown">
                         <div className="link"><Link to="flowers/סידורי פרחים" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-caret-down"></i> סידורי פרחים</Link></div>
                         <div className="dropdown">
@@ -43,6 +53,8 @@ export const Nav = () => {
                             <div className="link"><Link to="categories/פרלינים" className="nav-link " data-bs-toggle="tab">פרלינים</Link></div>
                         </div>
                     </li>
+                    <li><p className="line">|</p></li>
+
                     <li className="navbar-dropdown">
                         <div className="link"><Link to="flowers/עיצובי מתנות" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-caret-down"></i> עיצובי מתנות</Link></div>
                         <div className="dropdown">
@@ -52,6 +64,8 @@ export const Nav = () => {
 
                         </div>
                     </li>
+                    <li ><p className="line">|</p></li>
+
                     <li className="navbar-dropdown">
                         <div className="link"><Link to="flowers/מלאכותי" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-caret-down"></i> מלאכותי</Link></div>
                         <div className="dropdown">
@@ -59,9 +73,15 @@ export const Nav = () => {
                             <div className="link"><Link to="categories/כלי נוי" className="nav-link " data-bs-toggle="tab">כלי נוי</Link></div>
                         </div>
                     </li>
+                    <li ><p className="line">|</p></li>
+
                     <li className="navbar-dropdown">
-                        <div className="link"><Link to="categories/עציצים" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-leaf"></i> עציצים</Link></div>
+                        <div className="link"><Link to="categories/עציצים" className="nav-link " data-bs-toggle="tab">
+                            {/* <i className="fa-solid fa-leaf"></i> */}
+                             עציצים</Link></div>
                     </li>
+                    <li><p className="line">|</p></li>
+
                     <li className="navbar-dropdown">
                         <div className="link"><Link to="flowers/חגים" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-caret-down"></i> חגים</Link></div>
                         <div className="dropdown">
@@ -72,6 +92,8 @@ export const Nav = () => {
                             <div className="link"><Link to="categories/שבועות" className="nav-link " data-bs-toggle="tab">שבועות</Link></div>
                         </div>
                     </li>
+                    <li ><p className="line">|</p></li>
+
                     <li className="navbar-dropdown">
                         <div className="link"><Link to="flowers/עיצוב אירועים" className="nav-link " data-bs-toggle="tab"><i className="fa-solid fa-caret-down"></i> עיצוב אירועים</Link></div>
                         <div className="dropdown">
@@ -80,7 +102,7 @@ export const Nav = () => {
                             <div className="link"><Link to="categories/מרכזי שולחן" className="nav-link " data-bs-toggle="tab">מרכזי שולחן</Link></div>
                         </div>
                     </li>
-    
+                    <li ><p className="line">|</p></li>  
                    
                    
                     <li className="navbar-dropdown">

@@ -5,8 +5,9 @@ export const About = () => {
         <br /><br />
         <br /><br />
 
-        <h1 className="words">ברוכים הבאים</h1>
+        <h1 className="words">ברוכים הבאים לאתר</h1>
         <h1 className="words">לאתר שושנת העמקים</h1>
+        {/* <img src="לוגו.jpeg" id="logo1"></img> */}
         <div className='div1'>
             <p id='pp'>לשזור רגעים יפים</p>
 

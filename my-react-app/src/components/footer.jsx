@@ -15,7 +15,7 @@ export const Footer = () => {
                     <div className="footer-content-column">
                         <ul>
                             <p className="footer-header">   שושנת העמקים זמינה אליכם בכל עת     <i className="fa-regular fa-clock"></i></p>
-                            <p> בוקר -  10:00-13:30 | צהריים - 19:00-22:00 |  יום שישי – 10:00-13:00 </p>
+                            <p> בוקר -  10:00-13:30 | ערב - 19:00-22:00 |  יום שישי – 10:00-13:00 </p>
 
                             <div>
                                 <li className='icons'>
@@ -49,10 +49,10 @@ export const Footer = () => {
                             <defs>
                                 <linearGradient id="my-cool-gradient" x2="1" y2="1">
                                     {/* <stop offset="0%" stop-color="#fecd69" /> */}
-                                    <stop offset="0%" stop-color="#fecd69" />
+                                    <stop offset="40%" stop-color="#BCA661" />
                                     {/* <stop offset="0%" stop-color="#fecd69" /> */}
 
-                                    <stop offset="100%" stop-color="#ffdfa0" />
+                                    <stop offset="100%" stop-color="#C2AE68" />
                                     {/* <stop offset="100%" stop-color="#fff2d7" /> */}
                                 </linearGradient>
                             </defs>
