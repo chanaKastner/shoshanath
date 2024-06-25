@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'FBGesher';
-  src: url('../../fonts/FbGesher-Regular.otf'),
-    url('../../fonts/FbGesher-Bold.otf');
+  src: url('../../public/fonts/FbGesher-Regular.otf'),
+    url('../../public/fonts/FbGesher-Bold.otf');
 }
 /* כותרת */
 #header_p {
