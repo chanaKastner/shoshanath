@@ -5,6 +5,12 @@ import { useState } from 'react';
 
 
 export const Sub_Categories = () => {
+
+    const [showBigImage, setShowBigImage] = useState(false);
+    const click = () => {
+        setShowBigImage(false);
+    }
+
     const { category } = useParams();
     // const [setDialogOpen] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
@@ -32,7 +38,7 @@ export const Sub_Categories = () => {
             {images &&
                 images.map((image, imageIndex) => (
                     <>
-                        <a href={`#pic${imageIndex}`} onClick={() => openDialog(imageIndex)} >
+                        <a href={`#pic${imageIndex}`} onClick={() => {openDialog(imageIndex); setShowBigImage(true)}} >
                             <figure className="effect-lexi" key={imageIndex}>
                                 <img key={imageIndex} src={image} alt={nameImages[imageIndex]} id={imageIndex + 1}
                                 style={{scrollMarginTop: "30px"}} />
@@ -61,7 +67,10 @@ export const Sub_Categories = () => {
             }
             <div className="controls">           
             </div>
+            
             <a className="lightbox-close" href={`#${selectedImageIndex+1}`}></a>
+
+            {/* {(showBigImage) && <a href={`#${selectedImageIndex+1}`} onClick={click}><i className="fa-solid fa-times" ></i></a>} */}
         </div>
     </>
 }

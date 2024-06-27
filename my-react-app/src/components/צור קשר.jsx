@@ -15,7 +15,8 @@ export const Contact = () => {
     //פונקציה לשליחת מייל
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_kjh3a7h', 'template_aleywkg', form.current, 'Hl-Z7y6EcDXUStMCg')
+        // emailjs.sendForm('service_kjh3a7h', 'template_aleywkg', form.current, 'Hl-Z7y6EcDXUStMCg')
+        emailjs.sendForm('service_c45gdsz', 'template_l0dg17f', form.current, 'pyUGPL149J-2J7C6a')
             .then((result) => {
                 console.log(result.text);
                 setEmail("");
