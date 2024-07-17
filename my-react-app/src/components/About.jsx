@@ -7,7 +7,6 @@ export const About = () => {
 
         <h1 className="words">ברוכים הבאים לאתר</h1>
         <h1 className="words">לאתר שושנת העמקים</h1>
-        {/* <img src="לוגו.jpeg" id="logo1"></img> */}
         <div className='div1'>
             <p id='pp'>לשזור רגעים יפים</p>
 
@@ -26,14 +25,12 @@ export const About = () => {
             <p> עציצים <i class="fa-solid fa-spa"></i></p>
             <p> פרלינים בלגים <i class="fa-solid fa-spa"></i></p>
         </div>
-        {/* <p>פרחים חיים וטריים יום יום פרחים מלאכותיים, ואזות, אגרטלים, עציצים ופרלינים בלגים</p> */}
         <div className='div3'>
             <p>!עיצובי פרחים מרהיבים לכל מטרה ואירוע</p>
         </div>
-        {/* <img src='about2.png' style={{paddingTop:"190px", width:"40%"}}></img> */}
         <div className='div4'>
             <p>:להזמנות</p>
             <p>9744553@gmail.com <i className="fa-solid fa-envelope"></i> | 08 - 9744553 <i className="fa-solid fa-phone-alt"></i> | 0533191206 <i className="fa-solid fa-mobile-alt"></i></p>
         </div>
-    </>
+   </>
 }

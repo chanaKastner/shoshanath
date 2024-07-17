@@ -1,0 +1,33 @@
+# Ignore all image files
+*.webp
+*.jpeg
+*.webp
+*.gif
+*.webp
+*.bmp
+*.tiff
+*.svg
+
+# Also ignore specific folders containing images
+public/homePage/*
+public/זרי אחריות/*
+public/זרי כלה/*
+public/חגים/*
+public/מלאכותי/*
+public/סידורי פרחים/*
+public/עיצוב ארונות/*
+public/עיצובי מתנות/*
+public/עציצים/*
+
+# Ignore specific image files in the root of the public directory
+public/*.webp
+public/*.jpeg
+public/*.webp
+public/*.webp
+public/*.svg
+
+# Don't forget to ignore the Dockerfile itself
+Dockerfile
+
+# Node modules
+node_modules

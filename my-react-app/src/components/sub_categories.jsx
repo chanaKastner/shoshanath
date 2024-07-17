@@ -1,76 +1,68 @@
 import { useParams } from 'react-router-dom';
-import '../style/subCategories.css'
-import componentsData from '../data.json'
+import '../style/subCategories.css';
 import { useState } from 'react';
-
+import componentsData from '../data.json';
 
 export const Sub_Categories = () => {
-
     const [showBigImage, setShowBigImage] = useState(false);
-    const click = () => {
-        setShowBigImage(false);
-    }
-
     const { category } = useParams();
-    // const [setDialogOpen] = useState(false);
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
     const pageData = componentsData.find((data) => {
         return data.categories.some((subcategory) => subcategory.componentName === category);
     });
-    console.log({})
+
+    if (!pageData) {
+        console.error(`No page data found for category: ${category}`);
+        return <div>Category not found</div>;
+    }
 
     const images = pageData.categories.find((subcategory) => subcategory.componentName === category).images;
     const nameImages = pageData.categories.find((subcategory) => subcategory.componentName === category).namesImg;
 
-    console.log({ images })
-
     const openDialog = (index) => {
-        debugger
         setSelectedImageIndex(index);
-        // setDialogOpen(true);
     };
 
-
-    return <>
-        <p className='p_zerim'>{category}</p>
-        <div className="grid_lexi">
-            {images &&
-                images.map((image, imageIndex) => (
-                    <>
-                        <a href={`#pic${imageIndex}`} onClick={() => {openDialog(imageIndex); setShowBigImage(true)}} >
-                            <figure className="effect-lexi" key={imageIndex}>
-                                <img key={imageIndex} src={image} alt={nameImages[imageIndex]} id={imageIndex + 1}
-                                style={{scrollMarginTop: "30px"}} />
+    return (
+        <>
+            <p className='p_zerim'>{category}</p>
+            <div className="grid_lexi">
+                {images && images.map((image, imageIndex) => {
+                    // Remove leading slash if it exists
+                    const sanitizedImage = image.startsWith('/') ? image.substring(1) : image;
+                    const imageUrl = `https://storage.googleapis.com/shoshanat-images/public/${sanitizedImage}`;
+                    console.log(`Image URL: ${imageUrl}`);
+                    return (
+                        <a key={imageIndex} href={`#pic${imageIndex}`} onClick={() => { openDialog(imageIndex); setShowBigImage(true); }}>
+                            <figure className="effect-lexi">
+                                <img src={imageUrl} alt={nameImages[imageIndex]} onError={() => console.error(`Failed to load image: ${imageUrl}`)} />
                                 <figcaption>
                                     <p>{nameImages[imageIndex]}</p>
                                 </figcaption>
                             </figure>
                         </a>
-                    </>
-                ))}
-        </div>
-        <div className="lightbox-target" id={`pic${selectedImageIndex}`} >
-            {selectedImageIndex != 0 &&
-                <a href={`#pic${selectedImageIndex}`} onClick={() => openDialog(selectedImageIndex - 1)}>
-                    <i className="fa-solid fa-angle-left"></i>
-                </a>
-            }
-            <img key={selectedImageIndex} src={images[selectedImageIndex]} alt={nameImages[selectedImageIndex]} />
-            <div id = "div_nameImg">
-                <p>{nameImages[selectedImageIndex]}</p>
+                    );
+                })}
             </div>
-            {selectedImageIndex != images.length - 1 &&
-                <a href={`#pic${selectedImageIndex}`} onClick={() => openDialog(selectedImageIndex + 1)}>
-                    <i className="fa-solid fa-angle-right"></i>
-                </a>
-            }
-            <div className="controls">           
+            <div className="lightbox-target" id={`pic${selectedImageIndex}`} >
+                {selectedImageIndex !== 0 &&
+                    <a href={`#pic${selectedImageIndex}`} onClick={() => openDialog(selectedImageIndex - 1)}>
+                        <i className="fa-solid fa-angle-left"></i>
+                    </a>
+                }
+                {selectedImageIndex !== null &&
+                    <img src={`https://storage.googleapis.com/shoshanat-images/public/${images[selectedImageIndex].startsWith('/') ? images[selectedImageIndex].substring(1) : images[selectedImageIndex]}`} alt={nameImages[selectedImageIndex]} />
+                }
+                <div id="div_nameImg">
+                    <p>{nameImages[selectedImageIndex]}</p>
+                </div>
+                {selectedImageIndex !== images.length - 1 &&
+                    <a href={`#pic${selectedImageIndex}`} onClick={() => openDialog(selectedImageIndex + 1)}>
+                        <i className="fa-solid fa-angle-right"></i>
+                    </a>
+                }
             </div>
-            
-            <a className="lightbox-close" href={`#${selectedImageIndex+1}`}></a>
-
-            {/* {(showBigImage) && <a href={`#${selectedImageIndex+1}`} onClick={click}><i className="fa-solid fa-times" ></i></a>} */}
-        </div>
-    </>
-}
+        </>
+    );
+};
