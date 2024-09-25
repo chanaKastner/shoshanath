@@ -23,6 +23,7 @@
     "react-dom": "^18.2.0",
     "react-highlight-words": "^0.20.0",
     "react-hot-toast": "^2.4.1",
+    "react-lazyload": "^3.2.1",
     "react-loader-spinner": "^6.1.6",
     "react-multi-carousel": "^2.8.4",
     "react-redux": "^9.0.4",
@@ -59,4 +60,3 @@
     ]
   }
 }
-

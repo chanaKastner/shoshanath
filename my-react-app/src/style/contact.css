@@ -17,8 +17,11 @@
   /* z-indexs: 3; */
   padding-top: 50px;
   padding-bottom: 50px;
+
   .background {
-    background-image: url('https://storage.googleapis.com/shoshanat-images/public/contactBack.webp');}
+    background-image: url('https://storage.googleapis.com/shoshanat-images/public/contactBack.webp');
+  }
+
   background-size: cover;
   background-position: center;
 }
@@ -214,6 +217,7 @@
   .maps {
     width: 90%;
   }
+
   .section-header p {
     font-size: 15px;
   }

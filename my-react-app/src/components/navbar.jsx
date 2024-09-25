@@ -14,7 +14,9 @@ export const Nav = () => {
             {showNav ? (
                 <nav className="navbar">
                     <i className="fa-solid fa-times" onClick={click}></i>
-                    <img src={"https://storage.googleapis.com/shoshanat-images/public/לוגו.jpeg"} alt="logo" id="logo"></img>
+                    {/* <img src={"https://storage.googleapis.com/shoshanat-images/public/לוגו.jpeg'"} alt="logo" id="logo"></img> */}
+                    <img src={"https://storage.googleapis.com/shoshanat-images/public/לוגו.webp"} alt="logo" id="logo"></img>
+
                     <ul className="navbar-links">
                         <li className="navbar-dropdown">
                             <div className="link">

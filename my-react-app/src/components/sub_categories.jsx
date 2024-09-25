@@ -2,9 +2,9 @@ import { useParams } from 'react-router-dom';
 import '../style/subCategories.css';
 import { useState } from 'react';
 import componentsData from '../data.json';
+import LazyLoad from 'react-lazyload';
 
 export const Sub_Categories = () => {
-    const [showBigImage, setShowBigImage] = useState(false);
     const { category } = useParams();
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
@@ -23,6 +23,9 @@ export const Sub_Categories = () => {
     const openDialog = (index) => {
         setSelectedImageIndex(index);
     };
+    const closeDialog = () => {
+        setSelectedImageIndex(null);
+    };
 
     return (
         <>
@@ -34,18 +37,26 @@ export const Sub_Categories = () => {
                     const imageUrl = `https://storage.googleapis.com/shoshanat-images/public/${sanitizedImage}`;
                     console.log(`Image URL: ${imageUrl}`);
                     return (
-                        <a key={imageIndex} href={`#pic${imageIndex}`} onClick={() => { openDialog(imageIndex); setShowBigImage(true); }}>
-                            <figure className="effect-lexi">
-                                <img src={imageUrl} alt={nameImages[imageIndex]} onError={() => console.error(`Failed to load image: ${imageUrl}`)} />
-                                <figcaption>
-                                    <p>{nameImages[imageIndex]}</p>
-                                </figcaption>
-                            </figure>
+                        <a key={imageIndex} href={`#pic${imageIndex}`} onClick={() => { openDialog(imageIndex) }}>
+                            <LazyLoad height={200} once>
+                                <figure className="effect-lexi">
+                                    <img src={imageUrl} alt={nameImages[imageIndex]} onError={() => console.error(`Failed to load image: ${imageUrl}`)} />
+                                    <figcaption>
+                                        <p>{nameImages[imageIndex]}</p>
+                                    </figcaption>
+                                </figure>
+                            </LazyLoad>
+
                         </a>
                     );
                 })}
             </div>
             <div className="lightbox-target" id={`pic${selectedImageIndex}`} >
+                <a href="#" onClick={closeDialog} className="close-button"> <button class="item-1">
+                    <span class="inner">
+                        <span class="label">Close</span>
+                    </span>
+                </button></a>
                 {selectedImageIndex !== 0 &&
                     <a href={`#pic${selectedImageIndex}`} onClick={() => openDialog(selectedImageIndex - 1)}>
                         <i className="fa-solid fa-angle-left"></i>
